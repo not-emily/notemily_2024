@@ -1,0 +1,137 @@
+:root {
+    --color-body: #d6c9b1;
+    --color-body-dark: #a39784;
+    --color-primary: #4a6741;
+    --color-primary-dark: #374f2f;
+    --color-secondary: #bc6c25;
+    --color-secondary-light: #dda15e;
+}
+
+body {
+    background-color: var(--color-body);
+    
+    font-family: "Montserrat Alternates", system-ui;
+    font-weight: 400;
+    font-style: normal;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    padding: 0 clamp(20px, 5vw, 50px);
+    width: clamp(300px, 800px, 100vw);
+}
+
+nav, footer {
+    display: flex;
+    width: 100%;
+    background-color: var(--color-body);
+    margin: 15px;
+}
+
+footer {
+    justify-content: center;
+}
+
+footer i {
+    margin: 10px;
+    color: var(--color-body-dark);
+}
+
+footer i:hover {
+    color: var(--color-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2em;
+}
+
+li {
+    margin: 10px 0;
+}
+
+.card {
+    border-radius: 15px;
+    padding: 15px;
+    margin: 15px;
+}
+/*
+ * Effects
+ */
+ .grow {
+    transition: all .2s ease-in;
+}
+
+.grow:hover {
+    transform: scale(1.05);
+    z-index: 2;
+    box-shadow: 0 5px 20px -5px var(--color-body-dark);
+}
+
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+}
+
+.hero__img {
+    max-width: 50%;
+}
+
+.hero__txt {
+    margin-left: 20px;
+}
+
+.hero__txt > h1 {
+    margin: 0;
+}
+
+.hero__txt-name {
+    color: var(--color-primary);
+}
+
+/* Work XP Section */
+.work-xp {
+    display: flex;
+    margin-top: 20px;
+}
+
+.work-xp h2, .work-xp h3 {
+    margin-bottom: 5px;
+}
+
+/* .work-xp__experience {
+    background-color: var(--color-secondary-light);
+}
+
+.work-xp__skills {
+    background-color: var(--color-secondary);
+} */
+
+.work-xp__hard-soft {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.work-xp__meta {
+    text-align: right;
+}
+
+/* .work-xp__languages {
+    background-color: var(--color-primary);
+}
+
+.work-xp__frameworks {
+    background-color: var(--color-primary-dark);
+} */
