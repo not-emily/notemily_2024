@@ -7,13 +7,12 @@
     --color-secondary-light: #dda15e;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: var(--color-body);
-    
-    font-family: "Montserrat Alternates", system-ui;
-    font-weight: 400;
-    font-style: normal;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,11 +21,19 @@ body {
     min-height: 100vh;
 }
 
+/* Main font */
+body, input, label, select, textarea, button {
+    font-family: "Montserrat Alternates", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
 .content {
     display: flex;
     flex-direction: column;
     padding: 0 clamp(20px, 5vw, 50px);
     width: clamp(300px, 800px, 100vw);
+    margin-bottom: 50px;
 }
 
 nav, footer {
@@ -36,8 +43,19 @@ nav, footer {
     margin: 15px;
 }
 
+nav {
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+nav > h1 {
+    margin: 0;
+}
+
 footer {
     justify-content: center;
+    margin-top: auto;
 }
 
 footer i {
@@ -60,11 +78,67 @@ li {
     margin: 10px 0;
 }
 
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    width: max-content;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    color: #ffffff;
+    background-color: #4a6741;
+    border: solid 1px transparent;
+    border-radius: 5px;
+    font-size: 1.5em;
+    padding: 15px;
+    cursor: pointer;
+}
+
 .card {
     border-radius: 15px;
     padding: 15px;
     margin: 15px;
 }
+
+input, textarea, select {
+    width: 100%;
+    border: solid 1px var(--color-body-dark);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/*
+    Bootstrap mock classes
+*/
+.row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-column-gap: 10px;
+    margin: 10px 0;
+}
+
+.col {
+    display: grid;
+    grid-auto-flow: row;
+    margin: 10px 0;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.primary-color {
+    color: var(--color-primary);
+}
+
 /*
  * Effects
  */
